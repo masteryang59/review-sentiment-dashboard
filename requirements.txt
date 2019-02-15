@@ -1,0 +1,10 @@
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+httpx==0.28.1
+beautifulsoup4==4.15.0
+pydantic-settings==2.16.2
+openai==3.41.0
+typer==0.27.3
+rich==15.0.0
+# validate_schema
+# queue_message
