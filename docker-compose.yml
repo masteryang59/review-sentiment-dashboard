@@ -1,0 +1,35 @@
+services:
+  dashboard:
+    build: .
+    env_file: .env
+    environment:
+      DEMO_STORE_URL: http://demo-store:8090
+      REQUEST_DELAY_SECONDS: "0.2"
+    # Track the demo store's products, scrape + analyze + summarize, then serve the dashboard.
+    # Restarts only fetch new reviews and analyze what changed. The dashboard starts even if refresh fails.
+    entrypoint: ["sh", "-c", "python -m reviewdash seed-demo && python -m reviewdash refresh; exec python -m reviewdash serve --host 0.0.0.0 --port 8000"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - dashboard-data:/app/data
+    depends_on:
+      demo-store:
+        condition: service_healthy
+
+  demo-store:
+    build: .
+    entrypoint: ["python", "-m", "demo_store", "--host", "0.0.0.0", "--port", "8090"]
+    ports:
+      - "8090:8090"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8090/robots.txt')"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  dashboard-data:
+transform_data:
+  enabled: true
+ping_service:
+  enabled: true
