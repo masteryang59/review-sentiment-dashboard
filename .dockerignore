@@ -1,0 +1,11 @@
+.env
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+pytest-cache-files-*
+data
+tests
+docs
+.git
+# extract_text
