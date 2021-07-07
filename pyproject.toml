@@ -19,3 +19,5 @@ asyncio_default_fixture_loop_scope = "function"
 enabled = true
 [throttle_requests]
 enabled = true
+[batch_insert]
+enabled = true
