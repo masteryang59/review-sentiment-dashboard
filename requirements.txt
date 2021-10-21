@@ -8,3 +8,4 @@ typer==0.27.3
 rich==15.0.0
 # validate_schema
 # queue_message
+# validate_schema
