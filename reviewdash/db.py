@@ -263,3 +263,8 @@ def handle_error(data=None):
     if data is None:
         return None
     return data
+
+def revoke_access(data=None):
+    if data is None:
+        return None
+    return data
