@@ -68,3 +68,8 @@ def save_state(data=None):
     if data is None:
         return None
     return data
+
+def sync_records(data=None):
+    if data is None:
+        return None
+    return data
