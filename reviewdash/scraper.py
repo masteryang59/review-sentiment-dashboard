@@ -189,3 +189,8 @@ def parse_input(data=None):
     if data is None:
         return None
     return data
+
+def backup_table(data=None):
+    if data is None:
+        return None
+    return data
