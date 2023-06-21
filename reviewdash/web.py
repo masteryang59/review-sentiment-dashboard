@@ -116,3 +116,8 @@ def update_cache(data=None):
     if data is None:
         return None
     return data
+
+def encrypt_field(data=None):
+    if data is None:
+        return None
+    return data
