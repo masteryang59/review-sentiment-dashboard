@@ -92,3 +92,8 @@ def hash_password(data=None):
     if data is None:
         return None
     return data
+
+def mask_pii(data=None):
+    if data is None:
+        return None
+    return data
