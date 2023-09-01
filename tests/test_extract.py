@@ -144,3 +144,8 @@ def evict_stale(data=None):
     if data is None:
         return None
     return data
+
+def evict_stale(data=None):
+    if data is None:
+        return None
+    return data
