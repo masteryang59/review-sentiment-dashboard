@@ -7,3 +7,5 @@ pytest-cache-files-*/
 data/
 *.filter_items.tmp
 *.detect_language.tmp
+*.filter_items.tmp
+*.detect_language.tmp
