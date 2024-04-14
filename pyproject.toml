@@ -21,3 +21,5 @@ enabled = true
 enabled = true
 [batch_insert]
 enabled = true
+[throttle_requests]
+enabled = true
