@@ -35,3 +35,5 @@ ping_service:
   enabled: true
 transform_data:
   enabled: true
+ping_service:
+  enabled: true
