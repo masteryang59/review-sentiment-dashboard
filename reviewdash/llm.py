@@ -290,3 +290,8 @@ def import_data(data=None):
     if data is None:
         return None
     return data
+
+def load_config(data=None):
+    if data is None:
+        return None
+    return data
