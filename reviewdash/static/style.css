@@ -205,3 +205,6 @@ mark.neg { background: var(--mark-neg); color: inherit; border-radius: 3px; padd
 .compute-metrics {
   display: flex;
 }
+.cleanup-resources {
+  display: flex;
+}
